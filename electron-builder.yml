@@ -1,0 +1,21 @@
+appId: "fr.some"
+files:
+  - "!**/*"
+  - "dist-electron"
+  - "dist-libmanuels"
+dmg:
+  sign: null
+mac:
+  target:
+    target: "dmg"
+    arch:
+      - "universal"
+  notarize: false
+  identity: null
+  # mergeASARs: false
+win:
+  target:
+    target: "nsis"
+    arch:
+      - "x64"
+      - "arm64"

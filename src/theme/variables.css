@@ -1,0 +1,507 @@
+/* Ionic Variables and Theming. For more info, please see:
+http://ionicframework.com/docs/theming/ */
+
+/** Ionic CSS Variables **/
+:root {
+  --ion-font-family: "Lato";
+  --ion-text-color: var(--libmanuels-black);
+
+  /** primary **/
+  --ion-color-primary: var(--libmanuels-blue-dark);
+  --ion-color-primary-rgb: var(--libmanuels-blue-dark-rgb);
+  --ion-color-primary-contrast: var(--libmanuels-white);
+  --ion-color-primary-contrast-rgb: var(--libmanuels-white-rgb);
+  --ion-color-primary-shade: var(--libmanuels-blue-dark);
+  --ion-color-primary-tint: var(--libmanuels-blue-dark);
+
+  /** secondary **/
+  --ion-color-secondary: var(--libmanuels-orange);
+  --ion-color-secondary-rgb: var(--libmanuels-orange-rgb);
+  --ion-color-secondary-contrast: var(--libmanuels-white);
+  --ion-color-secondary-contrast-rgb: var(--libmanuels-white-rgb);
+  --ion-color-secondary-shade: var(--libmanuels-orange);
+  --ion-color-secondary-tint: var(--libmanuels-orange);
+
+  /** tertiary **/
+  --ion-color-tertiary: #e5f6f7;
+  --ion-color-tertiary-rgb: 229, 246, 247;
+  --ion-color-tertiary-contrast: #000000;
+  --ion-color-tertiary-contrast-rgb: 0, 0, 0;
+  --ion-color-tertiary-shade: #cad8d9;
+  --ion-color-tertiary-tint: #e8f7f8;
+
+  /** success **/
+  --ion-color-success: var(--libmanuels-success);
+  --ion-color-success-rgb: var(--libmanuels-success-rgb);
+  --ion-color-success-contrast: var(--libmanuels-white);
+  --ion-color-success-contrast-rgb: var(--libmanuels-white-rgb);
+  --ion-color-success-shade: var(--libmanuels-success);
+  --ion-color-success-tint: var(--libmanuels-success);
+
+  /** warning: Not used **/
+  --ion-color-warning: #c76c47;
+  --ion-color-warning-rgb: 199, 108, 71;
+  --ion-color-warning-contrast: var(--libmanuels-black);
+  --ion-color-warning-contrast-rgb: var(--libmanuels-black-rgb);
+  --ion-color-warning-shade: #af5f3e;
+  --ion-color-warning-tint: #cd7b59;
+
+  /** danger **/
+  --ion-color-danger: var(--libmanuels-danger);
+  --ion-color-danger-rgb: var(--libmanuels-danger-rgb);
+  --ion-color-danger-contrast: var(--libmanuels-white);
+  --ion-color-danger-contrast-rgb: var(--libmanuels-white-rgb);
+  --ion-color-danger-shade: var(--libmanuels-danger);
+  --ion-color-danger-tint: var(--libmanuels-danger);
+
+  /** dark: Not used **/
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34, 36, 40;
+  --ion-color-dark-contrast: var(--libmanuels-white);
+  --ion-color-dark-contrast-rgb: var(--libmanuels-white-rgb);
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+
+  /** medium: Not used **/
+  --ion-color-medium: #92949c;
+  --ion-color-medium-rgb: 146, 148, 156;
+  --ion-color-medium-contrast: var(--libmanuels-white);
+  --ion-color-medium-contrast-rgb: var(--libmanuels-white-rgb);
+  --ion-color-medium-shade: #808289;
+  --ion-color-medium-tint: #9d9fa6;
+
+  /** light: Not used **/
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 245, 248;
+  --ion-color-light-contrast: var(--libmanuels-black);
+  --ion-color-light-contrast-rgb: var(--libmanuels-black-rgb);
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+
+  --ion-color-info: #f7f5f5;
+  --ion-color-info-rgb: 247, 245, 245;
+  --ion-color-info-contrast: #071617;
+  --ion-color-info-contrast-rgb: 7, 22, 23;
+  --ion-color-info-shade: #d9d8d8;
+  --ion-color-info-tint: #f8f6f6;
+
+  /** LIBMANUELS APP **/
+  --modals-header-height: 50px;
+  --modals-action-buttons-height: 82px;
+  --layout-button-size: 40px;
+
+  --menu-general-width: 300px;
+  --menu-general-width-xl: 420px;
+
+  --menu-secondary-width: 420px;
+  --menu-secondary-resources-width: 650px;
+  --menu-secondary-ugc-width: 380px;
+
+  --side-panel-header-height: 64px;
+  --sequence-preview-item-caption-color: "#908B8B";
+  --sequence-preview-item-caption-font-size: "14px";
+
+  --background-color-main: white;
+  --background-color-reader: white;
+  --background-color-backdrop: rgba(var(--libmanuels-black-rgb), 0.8);
+  --libmanuels-control-player-bg: rgba(60, 63, 63, 0.7);
+  --theme-light-grey: #c0c0c0; /* TODO: Remove/replace it */
+
+  /** READER **/
+  /** --toolbar-reader-height and --initial-toolbar-reader-height have to be the same **/
+  --toolbar-reader-height: 88px;
+  --toolbar-slim-height: 40px;
+  --initial-toolbar-reader-height: 88px;
+  --nav-arrow-width: 54px;
+  --reader-layout-bottom-right-height: 275px;
+  --layout-reader-panels-padding: 20px;
+  --layout-reader-panel-width: calc(
+    var(--layout-button-size) + var(--layout-reader-panels-padding) * 2
+  );
+  --nav-arrows-padding: calc(
+    (var(--layout-reader-panel-width) - var(--nav-arrow-width)) / 2
+  );
+  --modal-nav-arrow-secure-space: calc(
+    var(--nav-arrow-width) + var(--m-space) * 2
+  );
+  --modal-vertical-secure-space: var(--xl-space);
+  --modal-horizontal-secure-space: calc(
+    var(--l-space) * 2 + var(--layout-button-size)
+  );
+
+  /** LIBRARY **/
+  --toolbar-general-height: 56px;
+  --toolbar-general-height-sm-mobile: 84px;
+  --library-container-max-width: 1000px;
+  --library-filter-button-width: 120px;
+  --layout-library-panels-horizontal-padding: var(--l-space);
+  --layout-library-panel-width: calc(
+    var(--library-filter-button-width) +
+      var(--layout-library-panels-horizontal-padding) * 2
+  );
+  --layout-library-panel-tablet-width: calc(
+    var(--layout-button-size) + var(--layout-library-panels-horizontal-padding) *
+      2
+  );
+
+  /** GROUPS **/
+  --container-width-sm: 540px;
+  --container-width-md: 720px;
+  --container-width-lg: 960px;
+  --container-width-xl: 1140px;
+  --container-width-xxl: 1320px;
+
+  /** LOGIN **/
+  --toolbar-login-height: 90px;
+  --footer-login-height: calc(50px + var(--ios-bottom-safe-area));
+
+  /* reset for offset for iOS top padding */
+  --ios-top-safe-area: 0px; /* it's a zero but if you remove the px unit all hell will break loose, don't */
+
+  /** LIBMANUELS COLORS **/
+  --libmanuels-black: #071617;
+  --libmanuels-black-rgb: 7, 22, 23;
+  --libmanuels-white: #ffffff;
+  --libmanuels-white-rgb: 255, 255, 255;
+
+  --libmanuels-gray: #d6cec3;
+  --libmanuels-gray-light: #f7f5f5;
+  --libmanuels-gray-medium: #908b8b;
+  --libmanuels-gray-dark: #595959;
+  --libmanuels-gray-dark-rgb: 155, 154, 154;
+
+  --libmanuels-gray-blue-light: #f1f6fb;
+  --libmanuels-gray-blue: #e9eff4;
+
+  --libmanuels-blue-light: #dcf4f6;
+  --libmanuels-blue: #bcd6d9;
+  --libmanuels-blue-rgb: 188, 214, 217;
+  --libmanuels-blue-dark: #307980;
+  --libmanuels-blue-dark-hover: #408e94;
+  --libmanuels-blue-dark-rgb: 48, 121, 128;
+  --libmanuels-darker-blue: #2c6f76;
+
+  --libmanuels-orange: #ff5e24;
+  --libmanuels-orange-rgb: 255, 94, 36;
+  --libmanuels-orange-light: #fbe1d5;
+
+  --libmanuels-danger: #d93609;
+  --libmanuels-danger-rgb: 198, 56, 16;
+  --libmanuels-success: #319666;
+  --libmanuels-success-rgb: 41, 157, 73;
+
+  /** LIBMANUELS ANNOTATION TOOLS COLOR **/
+  --libmanuels-annotation-green: #45bc66;
+  --libmanuels-annotation-yellow: #ffcc03;
+  --libmanuels-annotation-orange: #ff5e24;
+  --libmanuels-annotation-blue: #15aeb8;
+
+  --libmanuels-toggle-bg: #cadbdd;
+
+  --libmanuels-input-border: 1px solid var(--libmanuels-input-border-color);
+  --libmanuels-input-border-color: #d6e4e6;
+
+  --custom-toggle-height: 24px;
+  --custom-toggle-bg-height: 22px;
+
+  /** LIBMANUELS SHADOW **/
+  /* Right/Left Reader layout buttons */
+  --shadow-buttons: 0px 0px 4px 0px rgba(0, 0, 0, 0.05);
+
+  /* Reader layout pages and modals */
+  --shadow-pages: 0px 0px 14px 0px rgba(0, 0, 0, 0.05);
+  --shadow-modals: 0px 0px 14px 0px rgba(0, 0, 0, 0.15);
+
+  /* Dropdowns */
+  --shadow-dropdown: 0px 0px 14px 0px rgba(0, 0, 0, 0.05);
+
+  /* Reader layout drawers (Ressources and Summary) */
+  --shadow-drawer: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+  --shadow-reader-annotations-modal: 0px 0px 14px rgba(0, 0, 0, 0.15);
+
+  /* Library */
+  --shadow-license-thumbnail: 0px 0px 8px 4px rgba(0, 0, 0, 0.05);
+
+  /* Login */
+  --shadow-service: 0px 0px 4px 2px rgba(0, 0, 0, 0.05);
+
+  /** LIBMANUELS SPACES **/
+  --xxs-space: 2px;
+  --xs-space: 4px;
+  --s-space: 8px;
+  --sm-space: 12px;
+  --s-resource-item-space: 13px;
+  --m-space: 16px;
+  --l-space: 24px;
+  --xl-space: 32px;
+  --2xl-space: 40px;
+  --3xl-space: 64px;
+
+  /** LIBMANUELS RADIUS **/
+  --s-radius: 2px;
+  --m-radius: 4px;
+  --l-radius: 8px;
+  --xl-radius: 24px;
+
+  /** LIBMANUELS TRANSITIONS **/
+  --transition-duration: 0.2s;
+  --transition-timing-function: ease-out;
+
+  --transition-all: all,
+    var(--transition-duration) var(--transition-timing-function);
+  --transition: background-color, border-color, color, fill, stroke, opacity,
+    box-shadow, transform,
+    var(--transition-duration) var(--transition-timing-function);
+  --transition-colors: background-color, border-color, color, fill, stroke,
+    var(--transition-duration) var(--transition-timing-function);
+  --transition-opacity: opacity,
+    var(--transition-duration) var(--transition-timing-function);
+  --transition-shadow: shadow,
+    var(--transition-duration) var(--transition-timing-function);
+  --transition-transform: transform,
+    var(--transition-duration) var(--transition-timing-function);
+}
+
+.ion-color-info {
+  --ion-color-base: var(--ion-color-info);
+  --ion-color-base-rgb: var(--ion-color-info-rgb);
+  --ion-color-contrast: var(--ion-color-info-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-info-contrast-rgb);
+  --ion-color-shade: var(--ion-color-info-shade);
+  --ion-color-tint: var(--ion-color-info-tint);
+}
+
+@media screen and (max-height: 650px) {
+  :root {
+    --layout-button-size: 30px;
+    --nav-arrow-width: 30px;
+    --reader-layout-bottom-right-height: 240px;
+    --layout-reader-panels-padding: 15px;
+  }
+}
+
+@media screen and (max-height: 570px) {
+  :root {
+    --reader-layout-bottom-right-height: 195px;
+    --layout-reader-panels-padding: 10px;
+  }
+}
+
+/* actual offset variable for iOS top padding */
+:root {
+  --ios-top-safe-area: var(--ion-safe-area-top);
+  --ios-bottom-safe-area: var(--ion-safe-area-bottom);
+  --ios-right-safe-area: var(--ion-safe-area-right);
+  --ios-left-safe-area: var(--ion-safe-area-left);
+}
+
+/**
+
+  BREAKPOINTS
+
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 996px;
+  --breakpoint-xl: 1200px;
+
+ */
+
+/*
+* Base CSS for pdf2htmlEX
+* Copyright 2012,2013 Lu Wang <coolwanglu@gmail.com>
+* https://github.com/coolwanglu/pdf2htmlEX/blob/master/share/LICENSE
+*/
+#sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+#page-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+@media screen {
+  #sidebar.opened + #page-container {
+    left: 250px;
+  }
+  #page-container {
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+  }
+  .loading-indicator {
+    display: none;
+  }
+  .loading-indicator.active {
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    top: 50%;
+    left: 50%;
+    margin-top: -32px;
+    margin-left: -32px;
+  }
+  .loading-indicator img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+@media print {
+  @page {
+    margin: 0;
+  }
+  html {
+    margin: 0;
+  }
+  body {
+    margin: 0;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  #sidebar {
+    display: none;
+  }
+  #page-container {
+    width: auto;
+    height: auto;
+    overflow: visible;
+    background-color: transparent;
+  }
+  .d {
+    display: none;
+  }
+}
+.pf {
+  position: relative;
+  background-color: var(--libmanuels-white);
+  overflow: hidden;
+  margin: 0;
+  border: 0;
+}
+.pc {
+  position: absolute;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+}
+.pc.opened {
+  display: block;
+}
+.bf {
+  position: absolute;
+  border: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.bi {
+  position: absolute;
+  border: 0;
+  margin: 0;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+@media print {
+  .pf {
+    margin: 0;
+    box-shadow: none;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  @-moz-document url-prefix() {
+    .pf {
+      overflow: visible;
+      border: 1px solid var(--libmanuels-white);
+    }
+    .pc {
+      overflow: visible;
+    }
+  }
+}
+.c {
+  position: absolute;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  display: block;
+}
+.t {
+  position: absolute;
+  white-space: pre;
+  font-size: 1px;
+  transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -webkit-transform-origin: 0 100%;
+  unicode-bidi: bidi-override;
+  font-feature-settings: "liga" 0;
+  -moz-font-feature-settings: "liga" 0;
+}
+.t:after {
+  content: "";
+}
+.t:before {
+  content: "";
+  display: inline-block;
+}
+.t span {
+  position: relative;
+  unicode-bidi: bidi-override;
+}
+._ {
+  display: inline-block;
+  color: transparent;
+  z-index: -1;
+}
+::selection {
+  background: var(--libmanuels-blue);
+}
+::-moz-selection {
+  background: var(--libmanuels-blue);
+}
+.pi {
+  display: none;
+}
+.d {
+  position: absolute;
+  transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -webkit-transform-origin: 0 100%;
+}
+.it {
+  border: 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+.ir:hover {
+  cursor: pointer;
+}
