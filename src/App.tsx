@@ -34,6 +34,7 @@ import type { ComponentType } from "react";
 import { Home } from "./page/Home";
 import "./theme/variables.css";
 import { isElectron } from "./utils/platform";
+import { Profile } from "./page/Profile";
 
 setupIonicReact({ mode: "md", animated: false });
 const Router: ComponentType = isElectron()
@@ -47,6 +48,9 @@ export const App = () => {
         <IonRouterOutlet>
           <Route exact path="/home">
             <Home />
+          </Route>
+          <Route exact path="/profile">
+            <Profile />
           </Route>
           <Route exact path="/">
             <Redirect to="/home" />

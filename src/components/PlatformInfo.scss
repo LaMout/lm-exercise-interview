@@ -1,0 +1,23 @@
+.platform-info {
+  .platform-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .device-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+    .info-item {
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  .platform-content {
+    .content-description {
+      margin-top: 8px;
+    }
+  }
+}

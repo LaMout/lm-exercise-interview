@@ -1,0 +1,35 @@
+.profile-page {
+    .profile-toolbar {
+      --background: var(--ion-color-primary);
+      color: var(--ion-color-light);
+    }
+
+    .profile-header-card {
+        margin-bottom: 16px;
+    }
+
+    .profile-header-content {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+    }
+
+    .avatar-container {
+      flex-shrink: 0;
+    }
+
+    .profile-avatar {
+       width: 80px;
+       height: 80px;
+    }
+  
+    .profile-info {
+       flex: 1;
+    }
+  
+    .profile-name {
+       font-size: 1.4rem;
+       margin-top: 10px;
+    }
+}
